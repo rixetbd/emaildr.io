@@ -331,8 +331,33 @@ box-shadow: 0 0 10px 10px #00000010;
     border-bottom: 1px solid #ffffff;
     outline: 0;
     box-shadow: none;
+    background-color: #142631 !important;
 }
 
+.btn{
+    box-shadow:inset 0 0 10px 2px #0e1b22b6;
+    background: transparent;
+    margin: 5px auto;
+    padding: 5px 25px;
+    color: #fff;
+}
+.btn:hover{
+    box-shadow:inset 0 0 10px 2px #0e1b22cc;
+    background: transparent;
+    color: #fff;
+}
+.alert_box{
+    min-height: 25px;
+}
+.progress{
+    height: 8px;
+    background: #0e1b22cc;
+}
+.progress-bar, .progress-bar-striped{
+    height: 8px;
+    background-color: #142631;
+    border-radius: 20px;
+}
 /* Toast Message */
 
 .toast-message {
