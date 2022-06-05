@@ -287,7 +287,9 @@
 
             const output = document.getElementById('output')
             const copyFunc = document.getElementById('copyFunc')
-            output.innerText = emails
+            if($("#first_name").val() != '' && $("#domain").val() != '' && $("#last_name").val() != ''){
+                output.innerText = emails
+            }
 
             if (output.innerText != null) {
                 copyFunc.classList.remove('d-none')
