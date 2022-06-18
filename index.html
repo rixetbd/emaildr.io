@@ -221,6 +221,7 @@
         $("#first_name").keyup(function(){
             $('#progress_bar').css("transition", "1s ease-in");
             progressBar();
+            $("#submitbtn").click();
         });
         
         $("#last_name").focusout(function(){
@@ -230,6 +231,7 @@
         $("#last_name").keyup(function(){
             $('#progress_bar').css("transition", "1s ease-in");
             progressBar();
+            $("#submitbtn").click();
         });
         
         $("#domain").focusout(function(){
@@ -239,11 +241,9 @@
         $("#domain").keyup(function(){
             $('#progress_bar').css("transition", "1s ease-in");
             progressBar();
-        });
-    
-        $('#domain').keyup(function(){
             $("#submitbtn").click();
         });
+    
 
         $("#submitbtn").click(function () {
 
