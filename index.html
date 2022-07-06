@@ -10,6 +10,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
     <link rel="stylesheet" href="style.min.css">
     <title>DR. EGen By RixetBD 😍</title>
+    <style>
+        .displayDom{
+            margin-top: 5px;
+            font-size: 15px !important;
+            text-align: right !important;
+            color: #c7c7c7 !important;
+            margin-bottom: -5px;
+            transition: 1s ease-in;
+        }
+    </style>
 </head>
 
 <body>
@@ -47,7 +57,7 @@
                                 <input class="form-control cs_bg" type="text" id="domain" placeholder="example.com"
                                     required>
                             </div>
-
+                            <p class="displayDom" id="domainDisplay"></p>
                             <div class="mt-2 alert_box">
                                 <div class="progress">
                                     <div class="progress-bar progress-bar-striped progess_secondary progress-bar-animated" id="progress_bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
@@ -251,6 +261,16 @@
             var lastNameInput = $("#last_name").val().toLowerCase().replace(/\s/g, '');
             var domainInput = $("#domain").val().toLowerCase().replace(/\s/g, '.');
 
+            domainInput = domainInput.replace("http://www.","");
+            domainInput = domainInput.replace("https://www.","");
+            domainInput = domainInput.replace("http://","");
+            domainInput = domainInput.replace("https://","");
+            domainInput = domainInput.replace("www.","");
+            domainInput = domainInput.replace("/","");
+
+            $('#domainDisplay').show();
+            $('#domainDisplay').html(domainInput);
+
             if (firstNameInput.length == '') {
                 $('#first_namecheck').show();
             } else {
@@ -341,6 +361,7 @@
             $('#first_name').val("");
             $('#last_name').val("");
             $('#domain').val("");
+            $('#domainDisplay').hide();
             let emails = null;
             const output = document.getElementById('output')
             output.innerText = emails
