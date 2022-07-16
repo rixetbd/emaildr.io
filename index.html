@@ -41,6 +41,11 @@
                             <h3 class="gradient_text">Dr. EFinder v1.1</h3>
                             <p>Fill in the data below.</p>
 
+                            <div class="col-md-12">
+                                <input class="form-control cs_bg" type="text" id="fullName" placeholder="Full Name ( Max 2 words )"
+                                    required>
+                            </div>
+
                             <div class="row">
                                 <div class="col-md-6">
                                     <input class="form-control cs_bg" type="text" id="first_name"
@@ -199,6 +204,12 @@
         $('#last_namecheck').hide();
         $('#domaincheck').hide();
 
+        $('#fullName').keyup(function(){
+            let fullname = $('#fullName').val();
+            let fullnameArr = fullname.split(" ");
+            $('#first_name').val(fullnameArr[0]);
+            $('#last_name').val(fullnameArr[1]);
+        });
 
         function progressBar(){
             if($("#first_name").val() != '' && $("#domain").val() != '' && $("#last_name").val() != ''){
@@ -361,6 +372,7 @@
             $('#first_name').val("");
             $('#last_name').val("");
             $('#domain').val("");
+            $('#fullName').val("");
             $('#domainDisplay').hide();
             let emails = null;
             const output = document.getElementById('output')
