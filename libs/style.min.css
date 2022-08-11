@@ -24,10 +24,11 @@ body {
     background-repeat: no-repeat;
     /* animation: changeBackgroundColor 5s infinite; */
     background: linear-gradient(145deg, rgba(21, 39, 51, 1) 40%, rgb(6, 88, 18) 100%);
-    background-image: url('doctor.svg');
+    /* background-image: url('doctor.svg'); */
+    background-image: url('medical.png');
     background-color: #152733;
     background-position: left;
-    background-size:contain;
+    background-size:cover;
     background-repeat: no-repeat;
     position: relative;
 }
